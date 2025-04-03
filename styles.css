@@ -15,52 +15,82 @@ body {
     position: relative;
 }
 
+/* Her şekil için ortak stil */
 .shape {
     position: absolute;
     cursor: grab;
-    border: 2px solid black; /* Görsel olarak şekilleri görmek için ekledim */
+    border: 2px solid black;
 }
 
-/* Cone */
+/* Dondurma Külahı (ters yerleştirildi) */
 .cone {
     width: 60px;
     height: 80px;
     background-color: #d18c3c;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Scoop 1 */
+/* 4 farklı renkli top */
 .scoop1 {
     width: 100px;
     height: 100px;
-    background-color: #ff5a5f;
+    background-color: #ff5a5f; /* Kırmızı */
     border-radius: 50%;
-    bottom: 140px;
+    bottom: 130px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Scoop 2 */
 .scoop2 {
     width: 100px;
     height: 100px;
-    background-color: #5e7dff;
+    background-color: #5e7dff; /* Yeşil */
     border-radius: 50%;
-    bottom: 240px;
+    bottom: 230px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Cherry */
-.cherry {
-    width: 30px;
-    height: 30px;
-    background-color: #ff4136;
+.scoop3 {
+    width: 100px;
+    height: 100px;
+    background-color: #6bc4ff; /* Mavi */
     border-radius: 50%;
-    bottom: 340px;
+    bottom: 330px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.scoop4 {
+    width: 100px;
+    height: 100px;
+    background-color: #f9e054; /* Sarı */
+    border-radius: 50%;
+    bottom: 430px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Çiçek süsler */
+.flower1 {
+    width: 30px;
+    height: 30px;
+    background-color: #ff4136; /* Kırmızı çiçek */
+    border-radius: 50%;
+    bottom: 510px;
+    left: 50%;
+    transform: translateX(-50%) scale(1.5);
+}
+
+.flower2 {
+    width: 30px;
+    height: 30px;
+    background-color: #ffb5d0; /* Pembe çiçek */
+    border-radius: 50%;
+    bottom: 510px;
+    left: 60%;
+    transform: translateX(-50%) scale(1.5);
 }
