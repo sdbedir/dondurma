@@ -2,6 +2,7 @@ const shapes = document.querySelectorAll('.shape');
 let draggedElement = null;
 let offsetX = 0, offsetY = 0;
 
+// Şekillere sürükleme olayı ekle
 shapes.forEach(shape => {
     shape.addEventListener('mousedown', (e) => {
         startDrag(e.target, e.offsetX, e.offsetY);
@@ -29,12 +30,10 @@ document.addEventListener('touchmove', (e) => {
 
 document.addEventListener('mouseup', () => {
     endDrag();
-    checkPosition();
 });
 
 document.addEventListener('touchend', () => {
     endDrag();
-    checkPosition();
 });
 
 function startDrag(element, x, y) {
@@ -57,38 +56,4 @@ function endDrag() {
         draggedElement.style.cursor = 'grab';
         draggedElement = null;
     }
-}
-
-function checkPosition() {
-    const cone = document.getElementById('cone');
-    const scoop1 = document.getElementById('scoop1');
-    const scoop2 = document.getElementById('scoop2');
-    const scoop3 = document.getElementById('scoop3');
-    const topping = document.getElementById('topping');
-
-    // Check if the scoop is placed correctly
-    if (checkOverlap(cone, scoop1)) {
-        scoop1.style.top = `${cone.getBoundingClientRect().bottom}px`;
-    }
-    if (checkOverlap(cone, scoop2)) {
-        scoop2.style.top = `${scoop1.getBoundingClientRect().bottom}px`;
-    }
-    if (checkOverlap(cone, scoop3)) {
-        scoop3.style.top = `${scoop2.getBoundingClientRect().bottom}px`;
-    }
-    if (checkOverlap(cone, topping)) {
-        topping.style.top = `${scoop3.getBoundingClientRect().bottom}px`;
-    }
-}
-
-function checkOverlap(cone, shape) {
-    const coneRect = cone.getBoundingClientRect();
-    const shapeRect = shape.getBoundingClientRect();
-    
-    return (
-        shapeRect.left < coneRect.right &&
-        shapeRect.right > coneRect.left &&
-        shapeRect.top < coneRect.bottom &&
-        shapeRect.bottom > coneRect.top
-    );
 }
