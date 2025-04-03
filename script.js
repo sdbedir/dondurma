@@ -2,10 +2,10 @@ const shapes = document.querySelectorAll('.shape');
 let draggedElement = null;
 let offsetX = 0, offsetY = 0;
 
-// Şekillere sürükleme olayı ekle
 shapes.forEach(shape => {
     shape.addEventListener('mousedown', (e) => {
         startDrag(e.target, e.offsetX, e.offsetY);
+        console.log('Shape clicked:', shape); // Hangi şekil tıklandığını kontrol et
     });
 
     shape.addEventListener('touchstart', (e) => {
@@ -42,6 +42,7 @@ function startDrag(element, x, y) {
     offsetY = y;
     draggedElement.style.cursor = 'grabbing';
     draggedElement.style.zIndex = parseInt(getComputedStyle(draggedElement).zIndex || 0) + 1;
+    console.log('Started dragging:', draggedElement); // Hangi şekil sürükleniyor
 }
 
 function dragElement(x, y) {
