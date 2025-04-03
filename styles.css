@@ -26,5 +26,5 @@ body {
 #circle4 { top: 500px; left: 150px; width: 100px; height: 100px; background-color: yellow; border-radius: 50%; }
 
 /* Dondurma külahları daha büyük hale getirildi */
-#cone1 { bottom: 30px; left: 50%; width: 180px; height: 220px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
-#cone2 { bottom: 30px; left: 75%; width: 180px; height: 220px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+#cone1 { bottom: 30px; left: 40%; width: 200px; height: 250px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+#cone2 { bottom: 30px; left: 60%; width: 200px; height: 250px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
