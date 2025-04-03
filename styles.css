@@ -1,96 +1,30 @@
+/* styles.css */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
+    overflow: hidden;
+    user-select: none;
 }
 
 #game-area {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: relative;
+    background-color: #f0f0f0;
 }
 
-/* Her şekil için ortak stil */
 .shape {
     position: absolute;
     cursor: grab;
-    border: 2px solid black;
+    touch-action: none;
 }
 
-/* Dondurma Külahı (ters yerleştirildi) */
-.cone {
-    width: 60px;
-    height: 80px;
-    background-color: #d18c3c;
-    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+/* Şekilleri sol tarafta yukarıdan aşağı sıralıyoruz */
+#circle1 { top: 20px; left: 20px; width: 100px; height: 100px; background-color: red; border-radius: 50%; }
+#circle2 { top: 140px; left: 20px; width: 100px; height: 100px; background-color: blue; border-radius: 50%; }
+#circle3 { top: 260px; left: 20px; width: 100px; height: 100px; background-color: green; border-radius: 50%; }
+#circle4 { top: 380px; left: 20px; width: 100px; height: 100px; background-color: yellow; border-radius: 50%; }
 
-/* 4 farklı renkli top */
-.scoop1 {
-    width: 100px;
-    height: 100px;
-    background-color: #ff5a5f; /* Kırmızı */
-    border-radius: 50%;
-    bottom: 130px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.scoop2 {
-    width: 100px;
-    height: 100px;
-    background-color: #5e7dff; /* Yeşil */
-    border-radius: 50%;
-    bottom: 230px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.scoop3 {
-    width: 100px;
-    height: 100px;
-    background-color: #6bc4ff; /* Mavi */
-    border-radius: 50%;
-    bottom: 330px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.scoop4 {
-    width: 100px;
-    height: 100px;
-    background-color: #f9e054; /* Sarı */
-    border-radius: 50%;
-    bottom: 430px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Çiçek süsler */
-.flower1 {
-    width: 30px;
-    height: 30px;
-    background-color: #ff4136; /* Kırmızı çiçek */
-    border-radius: 50%;
-    bottom: 510px;
-    left: 50%;
-    transform: translateX(-50%) scale(1.5);
-}
-
-.flower2 {
-    width: 30px;
-    height: 30px;
-    background-color: #ffb5d0; /* Pembe çiçek */
-    border-radius: 50%;
-    bottom: 510px;
-    left: 60%;
-    transform: translateX(-50%) scale(1.5);
-}
+/* Dondurma külahları */
+#cone1 { bottom: 50px; left: 60%; width: 150px; height: 180px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+#cone2 { bottom: 50px; left: 80%; width: 150px; height: 180px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
