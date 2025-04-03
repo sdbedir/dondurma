@@ -1,30 +1,82 @@
-/* styles.css */
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    user-select: none;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
 }
 
 #game-area {
-    width: 100vw;
-    height: 100vh;
     position: relative;
+    width: 400px;
+    height: 600px;
     background-color: #f0f0f0;
+    overflow: hidden;
 }
 
+/* Her şekil için ortak stil */
 .shape {
     position: absolute;
     cursor: grab;
-    touch-action: none;
 }
 
-/* Şekilleri ekrana rastgele dağıtılmış şekilde yerleştiriyoruz */
-#circle1 { top: 50px; left: 100px; width: 100px; height: 100px; background-color: red; border-radius: 50%; }
-#circle2 { top: 200px; left: 250px; width: 100px; height: 100px; background-color: blue; border-radius: 50%; }
-#circle3 { top: 350px; left: 400px; width: 100px; height: 100px; background-color: green; border-radius: 50%; }
-#circle4 { top: 500px; left: 150px; width: 100px; height: 100px; background-color: yellow; border-radius: 50%; }
+/* Dondurma Külahı (ters yerleştirildi) */
+.cone {
+    width: 120px;
+    height: 140px;
+    background-color: #d18c3c;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-/* Dondurma külahları daha büyük hale getirildi */
-#cone1 { bottom: 30px; left: 40%; width: 200px; height: 250px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
-#cone2 { bottom: 30px; left: 60%; width: 200px; height: 250px; background-color: #d18c3c; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+/* 4 farklı renkli top */
+.scoop {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scoop1 {
+    background-color: #ff5a5f; /* Kırmızı */
+    bottom: 140px;
+}
+
+.scoop2 {
+    background-color: #5e7dff; /* Yeşil */
+    bottom: 260px;
+}
+
+.scoop3 {
+    background-color: #6bc4ff; /* Mavi */
+    bottom: 380px;
+}
+
+.scoop4 {
+    background-color: #f9e054; /* Sarı */
+    bottom: 500px;
+}
+
+/* Çiçek süsler */
+.flower {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff4136; /* Kırmızı çiçek */
+    bottom: 550px;
+    transform: scale(1.5);
+}
+
+.flower1 {
+    left: 50%;
+}
+
+.flower2 {
+    left: 60%;
+}
