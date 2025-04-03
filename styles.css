@@ -18,6 +18,7 @@ body {
 .shape {
     position: absolute;
     cursor: grab;
+    border: 2px solid black; /* Görsel olarak şekilleri görmek için ekledim */
 }
 
 /* Cone */
