@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+#game-area {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shape {
+    position: absolute;
+    cursor: grab;
+    transition: all 0.3s ease-in-out;
+}
+
+.cone {
+    width: 100px;
+    height: 150px;
+    background-color: #d28f4b;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    top: 30px;
+}
+
+.scoop {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 0;
+}
+
+.scoop.red {
+    background-color: #ff4d4d;
+    left: 50px;
+}
+
+.scoop.yellow {
+    background-color: #ffcc00;
+    left: 50px;
+    top: 140px;
+}
+
+.scoop.green {
+    background-color: #66ff66;
+    left: 50px;
+    top: 280px;
+}
+
+.topping {
+    width: 50px;
+    height: 50px;
+    background-color: #ff99cc;
+    border-radius: 50%;
+    top: 430px;
+    left: 85px;
+}
+
+#ice-cream-base {
+    position: absolute;
+    top: 650px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
