@@ -1,25 +1,26 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ice Cream Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Dondurma Oluşturma Oyunu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-area">
-        <!-- Dondurma külahı ters yerleştirildi -->
-        <div class="shape cone" id="cone"></div>  <!-- Dondurma külahı -->
-        <!-- 4 farklı renkli top -->
-        <div class="shape scoop scoop1" id="scoop1"></div> <!-- Kırmızı -->
-        <div class="shape scoop scoop2" id="scoop2"></div> <!-- Yeşil -->
-        <div class="shape scoop scoop3" id="scoop3"></div> <!-- Mavi -->
-        <div class="shape scoop scoop4" id="scoop4"></div> <!-- Sarı -->
-        <!-- Çiçek süsler -->
-        <div class="shape flower flower1" id="flower1"></div> <!-- Çiçek 1 -->
-        <div class="shape flower flower2" id="flower2"></div> <!-- Çiçek 2 -->
+    <div id="left-panel">
+        <div class="ice-cream-ball" style="background-color: pink;" draggable="true"></div>
+        <div class="ice-cream-ball" style="background-color: yellow;" draggable="true"></div>
+        <div class="ice-cream-ball" style="background-color: blue;" draggable="true"></div>
+        <div class="ice-cream-ball" style="background-color: green;" draggable="true"></div>
+        <div class="ice-cream-ball" style="background-color: purple;" draggable="true"></div>
     </div>
-
+    
+    <div id="game-area">
+        <div id="cone"></div>
+        <div id="drop-area"></div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
