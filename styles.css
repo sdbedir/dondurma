@@ -1,36 +1,38 @@
-/* style.css */
 body {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 #left-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .ice-cream-ball {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 10px;
-    cursor: grab;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: grab;
 }
 #cone {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 100px solid #c97f42;
-    position: relative;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid #c97f42;
+  position: relative;
+  margin-top: 100px;
 }
 #drop-area {
-    width: 120px;
-    height: 200px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 120px;
+  height: 300px;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: all;
 }
