@@ -1,82 +1,36 @@
+/* style.css */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
-    background-color: #f7f7f7;
-}
-
-#game-area {
-    position: relative;
-    width: 400px;
-    height: 600px;
     background-color: #f0f0f0;
-    overflow: hidden;
 }
-
-/* Her şekil için ortak stil */
-.shape {
-    position: absolute;
+#left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ice-cream-ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
     cursor: grab;
 }
-
-/* Dondurma Külahı (ters yerleştirildi) */
-.cone {
+#cone {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #c97f42;
+    position: relative;
+}
+#drop-area {
     width: 120px;
-    height: 140px;
-    background-color: #d18c3c;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    bottom: 0;
+    height: 200px;
+    position: absolute;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-}
-
-/* 4 farklı renkli top */
-.scoop {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.scoop1 {
-    background-color: #ff5a5f; /* Kırmızı */
-    bottom: 140px;
-}
-
-.scoop2 {
-    background-color: #5e7dff; /* Yeşil */
-    bottom: 260px;
-}
-
-.scoop3 {
-    background-color: #6bc4ff; /* Mavi */
-    bottom: 380px;
-}
-
-.scoop4 {
-    background-color: #f9e054; /* Sarı */
-    bottom: 500px;
-}
-
-/* Çiçek süsler */
-.flower {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #ff4136; /* Kırmızı çiçek */
-    bottom: 550px;
-    transform: scale(1.5);
-}
-
-.flower1 {
-    left: 50%;
-}
-
-.flower2 {
-    left: 60%;
 }
