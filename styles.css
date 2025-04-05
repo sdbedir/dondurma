@@ -25,12 +25,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
-.ball {
-  width: 60px;
-  height: 60px;
+.ball, .topping {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   cursor: grab;
   border: 2px solid #ccc;
@@ -39,8 +39,12 @@ body {
 .pink { background-color: pink; }
 .yellow { background-color: gold; }
 .blue { background-color: skyblue; }
-.green { background-color: lightgreen; }
+green { background-color: lightgreen; }
 .purple { background-color: plum; }
+
+.red { background-color: red; }
+brown { background-color: saddlebrown; }
+.white { background-color: white; }
 
 .game-area {
   position: relative;
