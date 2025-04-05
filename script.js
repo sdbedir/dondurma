@@ -2,12 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const balls = document.querySelectorAll(".ice-cream-ball");
   const dropArea = document.getElementById("drop-area");
 
+  // Topların sürüklenmesi
   balls.forEach(ball => {
     ball.addEventListener("dragstart", (e) => {
       e.dataTransfer.setData("color", ball.classList[1]);
     });
   });
 
+  // Oyun alanına top bırakıldığında
   dropArea.addEventListener("dragover", (e) => {
     e.preventDefault();
   });
