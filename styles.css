@@ -15,10 +15,15 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
+
 .container {
   display: flex;
   gap: 30px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .palette {
@@ -39,11 +44,11 @@ body {
 .pink { background-color: pink; }
 .yellow { background-color: gold; }
 .blue { background-color: skyblue; }
-green { background-color: lightgreen; }
+.green { background-color: lightgreen; }
 .purple { background-color: plum; }
 
 .red { background-color: red; }
-brown { background-color: saddlebrown; }
+.brown { background-color: saddlebrown; }
 .white { background-color: white; }
 
 .game-area {
@@ -54,12 +59,13 @@ brown { background-color: saddlebrown; }
   border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .cone {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 0;
   height: 0;
   border-left: 80px solid transparent;
@@ -68,13 +74,10 @@ brown { background-color: saddlebrown; }
 }
 
 .drop-zone {
-  position: absolute;
-  bottom: 150px;
-  left: 0;
   width: 100%;
-  height: 250px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   padding-bottom: 10px;
+  min-height: 250px;
 }
