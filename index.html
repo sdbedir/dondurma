@@ -1,28 +1,27 @@
+// index.html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dondurmanı Yap</title>
+  <title>Dondurma Yapma Oyunu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Dondurmanı Yap!</h1>
   <div class="container">
-    <div class="left-panel">
-      <h2>Dondurma Topları</h2>
-      <div class="ice-cream-ball pink" draggable="true"></div>
-      <div class="ice-cream-ball yellow" draggable="true"></div>
-      <div class="ice-cream-ball blue" draggable="true"></div>
-      <div class="ice-cream-ball green" draggable="true"></div>
-      <div class="ice-cream-ball purple" draggable="true"></div>
+    <div class="palette">
+      <div class="ball pink" draggable="true" data-color="pink"></div>
+      <div class="ball yellow" draggable="true" data-color="yellow"></div>
+      <div class="ball blue" draggable="true" data-color="blue"></div>
+      <div class="ball green" draggable="true" data-color="green"></div>
+      <div class="ball purple" draggable="true" data-color="purple"></div>
     </div>
-
     <div class="game-area">
+      <div class="drop-zone" id="drop-zone"></div>
       <div class="cone"></div>
-      <div id="drop-area" class="drop-area"></div>
     </div>
   </div>
-
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
