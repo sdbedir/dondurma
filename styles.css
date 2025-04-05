@@ -1,18 +1,22 @@
-body {
+/* Genel stil */
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
 }
 
+/* Konteyner ve paneller */
 .container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
   padding: 20px;
-  flex-wrap: wrap;
 }
 
 .left-panel {
@@ -40,10 +44,13 @@ body {
 .green { background-color: lightgreen; }
 .purple { background-color: plum; }
 
+/* Oyun alanı */
 .game-area {
   position: relative;
   width: 150px;
   height: 400px;
+  border: 2px solid #ccc;
+  background-color: #fff;
 }
 
 .cone {
@@ -57,11 +64,14 @@ body {
   left: 0;
 }
 
-#drop-area {
+.drop-area {
   position: absolute;
   bottom: 150px;
   left: 0;
   width: 150px;
   height: 250px;
+  background-color: #f3f3f3;
+  border: 2px dashed #ccc;
+  overflow: hidden;
   pointer-events: all;
 }
