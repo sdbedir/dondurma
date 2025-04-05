@@ -1,38 +1,67 @@
 body {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
 }
-#left-panel {
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.left-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.left-panel h2 {
+  margin-bottom: 10px;
+}
+
 .ice-cream-ball {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin: 10px;
   cursor: grab;
+  border: 2px solid #ccc;
 }
-#cone {
+
+.pink { background-color: pink; }
+.yellow { background-color: yellow; }
+.blue { background-color: skyblue; }
+.green { background-color: lightgreen; }
+.purple { background-color: plum; }
+
+.game-area {
+  position: relative;
+  width: 150px;
+  height: 400px;
+}
+
+.cone {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 100px solid #c97f42;
-  position: relative;
-  margin-top: 100px;
-}
-#drop-area {
-  width: 120px;
-  height: 300px;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 150px solid #c97f42;
   position: absolute;
-  bottom: 120px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+}
+
+#drop-area {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  width: 150px;
+  height: 250px;
   pointer-events: all;
 }
