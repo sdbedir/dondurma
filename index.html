@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dondurmanı Yap!</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <h1>Dondurmanı Yap!</h1>
-  <div class="container">
-    <div class="palette">
+  <p class="instruction">
+    Soldan bir dondurma topu ya da süs seç. Sonra dondurma alanına dokun veya sürükle-bırak.
+  </p>
+
+  <main class="container">
+
+    <section class="palette">
       <h2>Toplar</h2>
-      <div class="ball pink" draggable="true" data-color="pink"></div>
-      <div class="ball yellow" draggable="true" data-color="yellow"></div>
-      <div class="ball blue" draggable="true" data-color="blue"></div>
-      <div class="ball green" draggable="true" data-color="green"></div>
-      <div class="ball purple" draggable="true" data-color="purple"></div>
+
+      <div class="ball pink" draggable="true" data-type="ball" data-color="pink" aria-label="Pembe dondurma topu"></div>
+      <div class="ball yellow" draggable="true" data-type="ball" data-color="yellow" aria-label="Sarı dondurma topu"></div>
+      <div class="ball blue" draggable="true" data-type="ball" data-color="blue" aria-label="Mavi dondurma topu"></div>
+      <div class="ball green" draggable="true" data-type="ball" data-color="green" aria-label="Yeşil dondurma topu"></div>
+      <div class="ball purple" draggable="true" data-type="ball" data-color="purple" aria-label="Mor dondurma topu"></div>
 
       <h2>Süsler</h2>
-      <div class="topping red" draggable="true" data-topping="red"></div>
-      <div class="topping brown" draggable="true" data-topping="brown"></div>
-      <div class="topping white" draggable="true" data-topping="white"></div>
-    </div>
 
-    <div class="game-area">
+      <div class="topping red" draggable="true" data-type="topping" data-color="red" aria-label="Kırmızı süs"></div>
+      <div class="topping brown" draggable="true" data-type="topping" data-color="brown" aria-label="Kahverengi süs"></div>
+      <div class="topping white" draggable="true" data-type="topping" data-color="white" aria-label="Beyaz süs"></div>
+    </section>
+
+    <section class="game-area">
       <div id="drop-zone" class="drop-zone"></div>
       <div class="cone"></div>
-    </div>
-  </div>
+    </section>
+
+  </main>
+
+  <p id="message">Oyuna başlamak için bir parça seç.</p>
+
+  <button id="resetBtn" type="button">Tekrar Oyna</button>
 
   <script src="script.js"></script>
 </body>
