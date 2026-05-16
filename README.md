@@ -1,32 +1,18 @@
-# 🍦 Dondurmanı Yap! - Sürükle Bırak Oyunu
+# Dondurmanı Yap!
 
-Bu oyun ile kendi dondurmanı yapabilirsin! Renkli topları ve süsleri sürükleyerek külahın üstüne yerleştir.
+**Dondurmanı Yap!**, çocuklara yönelik basit, eğlenceli ve etkileşimli bir web oyunudur. Oyuncu, ekrandaki dondurma toplarını ve süsleri seçerek kendi dondurmasını oluşturur.
 
-## Özellikler
-
-- 5 farklı renkte dondurma topu (pink, yellow, blue, green, purple)
-- 3 farklı süs (red, brown, white)
-- Sürükle bırak (drag & drop) ile etkileşim
-- Mobil/tablet uyumlu tasarım
-
-## Nasıl Çalışır?
-
-1. Bu dosyaları aynı klasöre koy:
-   - `index.html`
-   - `style.css`
-   - `script.js`
-
-2. `index.html` dosyasını bir tarayıcıda aç.
-
-3. Topları ve süsleri sağdan sürükleyip külahın üzerine bırak.
-
-## GitHub’da Yayınlama
-
-1. Yeni bir repo oluştur.
-2. Tüm dosyaları yükle.
-3. `Settings > Pages` sekmesinden GitHub Pages özelliğini aç.
-4. Sayfan https://kullaniciadi.github.io/repo-adi adresinden erişilebilir olacak.
+Oyun HTML, CSS ve JavaScript kullanılarak hazırlanmıştır. Masaüstü bilgisayarlarda sürükle-bırak yöntemiyle, tablet ve dokunmatik ekranlarda ise seç-dokun mantığıyla çalışır.
 
 ---
 
-🧁 İyi oyunlar!
+## Proje İçeriği
+
+Proje üç temel dosyadan oluşur:
+
+```text
+dondurma-oyunu/
+│
+├── index.html
+├── style.css
+└── script.js
